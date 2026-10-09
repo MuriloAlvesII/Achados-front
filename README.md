@@ -31,5 +31,5 @@ Depois, acesse o endereço mostrado pelo Vite no terminal.
 
 Desenvolvido por Murilo Alves de Lima como projeto de aprendizado em ...<!-- React -->, no curso de Informática do IFRN.
 
-- GitHub: [@MuriloAlvesII](https://github.com/MuriloAlvesII)
+- GitHub: ![@MuriloAlvesII](https://github.com/MuriloAlvesII)
 - Projeto: [Exercicio-Formulario-React IFRN](https://github.com/MuriloAlvesII/Exercicio-Formulario-React.git)
