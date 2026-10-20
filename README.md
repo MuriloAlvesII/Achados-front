@@ -6,9 +6,17 @@ O **Inventum** é uma aplicação web de achados e perdidos desenvolvida para o 
 
 ## Imagens
 
-A interface do Inventum apresenta uma página inicial com o catálogo de itens encontrados, indicadores de itens cadastrados, itens aguardando o dono e itens devolvidos. Também possui páginas para cadastrar ou editar itens e consultar os detalhes de cada registro.
+### Página inicial — Cabeçalho 
 
-> Para adicionar capturas de tela nesta seção, salve as imagens do projeto em uma pasta do repositório e insira-as aqui usando Markdown.
+<img width="1917" height="1076" alt="Captura de tela 2026-10-20 005051" src="https://github.com/user-attachments/assets/d3e9fd3b-83ea-498e-a7b4-ff7582d7eb65" />
+
+### Página inicial — Lista de itens
+
+<img width="1917" height="1078" alt="Captura de tela 2026-10-20 005103" src="https://github.com/user-attachments/assets/f836a238-0006-43a8-8566-944a52e5b9a8" />
+
+### Página de cadastro de item
+
+<img width="1917" height="1075" alt="Captura de tela 2026-10-20 005149" src="https://github.com/user-attachments/assets/973e9ff3-c860-45b2-afb5-84e095500c45" />
 
 ## Como Executa
 
