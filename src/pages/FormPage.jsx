@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import api, { getApiError } from "../services/api.js";
+import api, { getApiError, getCategorias, getLocais } from "../services/api.js";
 import { getItemId } from "../services/format.js";
 
 import ItemForm from "../componentes/ItemForm.jsx";
@@ -23,10 +23,12 @@ function FormPage({ mode }) {
     setLoading(true);
     setError("");
     try {
-      const categoryResponse = await api.get("/categorias");
-      setCategories(Array.isArray(categoryResponse.data) ? categoryResponse.data : []);
-      const locationResponse = await api.get("/locais");
-      setLocations(Array.isArray(locationResponse.data) ? locationResponse.data : []);
+      const [categoriesData, locationsData] = await Promise.all([
+        getCategorias(),
+        getLocais(),
+      ]);
+      setCategories(categoriesData);
+      setLocations(locationsData);
       if (editando) {
         const itemResponse = await api.get(`/itens/${id}`);
         setInitial(itemResponse.data);

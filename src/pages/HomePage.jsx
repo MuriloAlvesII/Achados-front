@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
-import api, { getApiError } from "../services/api.js";
+import api, { getApiError, getCategorias, getLocais } from "../services/api.js";
 import { getItemId } from "../services/format.js";
 
 import ItemCard from "../componentes/ItemCard.jsx";
@@ -38,15 +38,15 @@ function HomePage() {
     }
 
     try {
-      const response = await api.get("/categorias");
-      setCategorias(Array.isArray(response.data) ? response.data : []);
+      const data = await getCategorias();
+      setCategorias(data);
     } catch (error) {
       setCategorias([]);
     }
 
     try {
-      const response = await api.get("/locais");
-      setLocais(Array.isArray(response.data) ? response.data : []);
+      const data = await getLocais();
+      setLocais(data);
     } catch (error) {
       setLocais([]);
     }

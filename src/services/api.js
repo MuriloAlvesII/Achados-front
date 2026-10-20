@@ -7,6 +7,33 @@ const api = axios.create({
     },
 });
 
+let categoriasPromise;
+let locaisPromise;
+
+function getCategorias() {
+    if (!categoriasPromise) {
+        categoriasPromise = api.get("/categorias")
+            .then((response) => Array.isArray(response.data) ? response.data : [])
+            .catch((error) => {
+                categoriasPromise = null;
+                throw error;
+            });
+    }
+    return categoriasPromise;
+}
+
+function getLocais() {
+    if (!locaisPromise) {
+        locaisPromise = api.get("/locais")
+            .then((response) => Array.isArray(response.data) ? response.data : [])
+            .catch((error) => {
+                locaisPromise = null;
+                throw error;
+            });
+    }
+    return locaisPromise;
+}
+
 function getApiError(error) {
     if (error && error.response && error.response.data && error.response.data.detail) {
         const detail = error.response.data.detail;
@@ -41,5 +68,5 @@ function getApiError(error) {
     return "Ocorreu um erro inesperado.";
 }
 
-export { getApiError };
+export { getApiError, getCategorias, getLocais };
 export default api;
