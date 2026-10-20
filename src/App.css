@@ -190,7 +190,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid #bfdbfe; border-c
 .narrow-page { width: min(760px, 100%); margin: 0 auto; }
 .back-link { display: inline-block; color: #2563eb; margin-bottom: 18px; font-weight: bold; }
 .form-page-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-.form-heading-icon { display: flex; align-items: center; justify-content: center; min-width: 58px; height: 58px; border-radius: 12px; background: #dbeafe; color: #1d4ed8; font-weight: bold; }
+.form-heading-icon { display: none !important; }
 .form-page-heading h1 { margin: 5px 0; }
 .form-page-heading p { color: #64748b; margin-bottom: 0; }
 .tip-banner { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; margin-bottom: 18px; color: #1e40af; }
@@ -200,7 +200,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid #bfdbfe; border-c
 .form-section-title { display: flex; gap: 12px; align-items: center; margin-bottom: 22px; }
 .form-section-title h2 { margin: 0 0 4px; }
 .form-section-title p { margin: 0; color: #64748b; font-size: 14px; }
-.section-number { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; flex-shrink: 0; background: #eaf1ff; color: #2563eb; border-radius: 9px; font-weight: bold; }
+.section-number { display: none !important; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .field { display: block; color: #334155; font-size: 14px; font-weight: bold; }
 .field-full { grid-column: 1 / -1; }

@@ -88,10 +88,10 @@ function HomePage() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <span className="eyebrow"> CAMPUS MAIS CONECTADO</span>
-          <h1>Um objeto perdido.<br /><span>Uma história que continua.</span></h1>
-          <p>Encontre o que está procurando ou ajude um item perdido a voltar para seu dono.</p>
-          <Link to="/novo" className="button button-light"> Registrar item encontrado</Link>
+          <h1>Encontre o que está procurando</h1>
+          <h1>ou<br /><span>Saia do site.</span></h1>
+          <p>Abaixo.</p>
+          <Link to="/novo" className="button button-light"> Registre um item encontrado.</Link>
         </div>
         <div className="hero-art" aria-hidden="true">
           <div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" />
@@ -109,7 +109,7 @@ function HomePage() {
 
       <section className="listing-section">
         <div className="section-heading">
-          <div><span className="eyebrow eyebrow-dark">CATÁLOGO DO CAMPUS</span><h2>Itens encontrados</h2><p>Pesquise e filtre os registros do campus.</p></div>
+          <div><span className="eyebrow eyebrow-dark">LISTA DE ITENS</span><h2>Itens encontrados</h2></div>
           <Link to="/novo" className="button button-primary"> Novo item</Link>
         </div>
 

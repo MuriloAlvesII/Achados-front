@@ -70,9 +70,8 @@ function FormPage({ mode }) {
         <span className="form-heading-icon">{editando ? "Editar" : "Novo"}</span>
 
         <div>
-          <span className="eyebrow eyebrow-dark">{editando ? "ATUALIZE O REGISTRO" : "NOVO REGISTRO"}</span>
           <h1>{editando ? "Editar item" : "Cadastrar item"}</h1>
-          <p>{editando ? "Atualize as informações do objeto encontrado." : "Registre um objeto encontrado para ajudar a devolvê-lo ao dono."}</p>
+          <p>{editando ? "Atualize as informações do objeto encontrado." : "Registre um objeto encontrado."}</p>
         </div>
       </div>
 
@@ -80,10 +79,7 @@ function FormPage({ mode }) {
         {error}
         <button className="icon-button" onClick={() => setError("")} aria-label="Fechar aviso"></button>
       </div>}
-
-      {!editando && <div className="tip-banner">
-        <p><strong>Uma informação de cada vez.</strong> Preencha os campos com cuidado para que o dono consiga reconhecer o objeto.</p>
-      </div>}
+      
       <ItemForm 
         key={`${mode}-${id || "new"}`} 
         initialValues={initial} 
