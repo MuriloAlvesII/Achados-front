@@ -10,11 +10,11 @@ O projeto serve como prática dos conceitos de desenvolvimento de aplicações w
 
 ### Página inicial — Cabeçalho 
 
-<img width="1917" height="1076" alt="Captura de tela 2026-10-20 005051" src="https://github.com/user-attachments/assets/d3e9fd3b-83ea-498e-a7b4-ff7582d7eb65" />
+<img width="1917" height="1078" alt="Captura de tela 2026-10-20 013450" src="https://github.com/user-attachments/assets/21bfcc39-edcd-4ce6-9c7d-8b400d177a29" />
 
 ### Página inicial — Lista de itens
 
-<img width="1917" height="1078" alt="Captura de tela 2026-10-20 005103" src="https://github.com/user-attachments/assets/f836a238-0006-43a8-8566-944a52e5b9a8" />
+<img width="1917" height="1078" alt="Captura de tela 2026-10-20 013438" src="https://github.com/user-attachments/assets/192893a8-c354-4d2b-9e4b-d85a79c01c5b" />
 
 ### Página de cadastro de item
 
