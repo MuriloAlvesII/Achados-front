@@ -2,7 +2,9 @@
 
 ## Objetivo
 
-O **Inventum** é uma aplicação web de achados e perdidos desenvolvida para o campus do IFRN – Campus Pau dos Ferros. O sistema permite consultar itens encontrados, pesquisar e filtrar registros por nome, status, categoria e local, além de cadastrar novos itens e visualizar seus detalhes. A proposta é facilitar a devolução dos objetos aos seus donos e ajudar a comunidade acadêmica a encontrar itens perdidos.
+O objetivo deste projeto é desenvolver um sistema web de achados e perdidos para o IFRN – Campus Pau dos Ferros e integrá-lo à API disponibilizada pelo professor Jeferson Queiroga.
+
+O projeto serve como prática dos conceitos de desenvolvimento de aplicações web com React e da integração entre uma interface web e uma API.
 
 ## Imagens
 
