@@ -4,8 +4,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import api, { getApiError } from "../services/api.js";
 import { getItemId } from "../services/format.js";
 
-import ItemCard from "../components/ItemCard.jsx";
-import { Loading, ErrorState, EmptyState } from "../components/PageStates.jsx";
+import ItemCard from "../componentes/ItemCard.jsx";
+import {Loading, ErrorState, EmptyState} from "../componentes/PageStates.jsx";
 
 
 function getNomeOption(item) {

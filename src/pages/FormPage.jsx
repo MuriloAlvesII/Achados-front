@@ -4,8 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import api, { getApiError } from "../services/api.js";
 import { getItemId } from "../services/format.js";
 
-import ItemForm from "../components/ItemForm.jsx";
-import { Loading } from "../components/PageStates.jsx";
+import ItemForm from "../componentes/ItemForm.jsx";
+import { Loading } from "../componentes/PageStates.jsx";
 
 
 function FormPage({ mode }) {
@@ -64,10 +64,32 @@ function FormPage({ mode }) {
   return (
     <div className="narrow-page">
       <Link to={editando ? `/item/${id}` : "/"} className="back-link"> {editando ? "Voltar para o detalhe" : "Voltar para os itens"}</Link>
-      <div className="form-page-heading"><span className="form-heading-icon">{editando ?  : }</span><div><span className="eyebrow eyebrow-dark">{editando ? "ATUALIZE O REGISTRO" : "NOVO REGISTRO"}</span><h1>{editando ? "Editar item" : "Cadastrar item"}</h1><p>{editando ? "Atualize as informações do objeto encontrado." : "Registre um objeto encontrado para ajudar a devolvê-lo ao dono."}</p></div></div>
-      {error && <div className="notice error">{error}<button className="icon-button" onClick={() => setError("")} aria-label="Fechar aviso"></button></div>}
-      {!editando && <div className="tip-banner"><p><strong>Uma informação de cada vez.</strong> Preencha os campos com cuidado para que o dono consiga reconhecer o objeto.</p></div>}
-      <ItemForm key={`${mode}-${id || "new"}`} initialValues={initial} categories={categories} locations={locations} onSubmit={salvarItem} onCancel={() => navigate(editando ? `/item/${id}` : "/")} submitting={saving} />
+      <div className="form-page-heading">
+        <span className="form-heading-icon">{editando ? "Editar" : "Novo"}</span>
+
+        <div>
+          <span className="eyebrow eyebrow-dark">{editando ? "ATUALIZE O REGISTRO" : "NOVO REGISTRO"}</span>
+          <h1>{editando ? "Editar item" : "Cadastrar item"}</h1>
+          <p>{editando ? "Atualize as informações do objeto encontrado." : "Registre um objeto encontrado para ajudar a devolvê-lo ao dono."}</p>
+        </div>
+      </div>
+
+      {error && <div className="notice error">
+        {error}
+        <button className="icon-button" onClick={() => setError("")} aria-label="Fechar aviso"></button>
+      </div>}
+
+      {!editando && <div className="tip-banner">
+        <p><strong>Uma informação de cada vez.</strong> Preencha os campos com cuidado para que o dono consiga reconhecer o objeto.</p>
+      </div>}
+      <ItemForm 
+        key={`${mode}-${id || "new"}`} 
+        initialValues={initial} 
+        categories={categories} 
+        locations={locations} 
+        onSubmit={salvarItem} 
+        onCancel={() => navigate(editando ? `/item/${id}` : "/")} 
+        submitting={saving} />
     </div>
   );
 }

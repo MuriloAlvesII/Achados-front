@@ -36,4 +36,4 @@ function EmptyState({ filtered, onClear }) {
   );
 }
 
-export default {Loading, ErrorState, EmptyState};
+export { Loading, ErrorState, EmptyState };

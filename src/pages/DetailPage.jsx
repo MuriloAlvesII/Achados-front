@@ -4,8 +4,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import api, { getApiError } from "../services/api.js";
 import { formatDate } from "../services/format.js";
 
-import StatusBadge from "../components/StatusBadge.jsx";
-import { Loading, ErrorState, EmptyState } from "../components/PageStates.jsx";
+import StatusBadge from "../componentes/StatusBadge.jsx";
+import { Loading, ErrorState, EmptyState } from "../componentes/PageStates.jsx";
 
 function DetailPage() {
   const { id } = useParams();
