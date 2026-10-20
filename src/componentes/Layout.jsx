@@ -7,7 +7,7 @@ function Layout({ dono }) {
         <div className="topbar-inner">
           <Link to="/" className="brand" aria-label="Achados e Perdidos - início">
             <span className="brand-mark"></span>
-            <span><strong>Achados<span className="brand-amp">&</span>Perdidos</strong><small>IFRN · Campus Pau dos Ferros</small></span>
+            <span><strong>Inventum<span className="brand-amp"></span></strong><small>IFRN · Campus Pau dos Ferros</small></span>
           </Link>
           <nav className="main-nav" aria-label="Navegação principal">
             <NavLink to="/" end className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> Início</NavLink>
@@ -18,8 +18,8 @@ function Layout({ dono }) {
       </header>
       <main className="page-content"><Outlet /></main>
       <footer className="footer">
-        <span> Achados & Perdidos <span className="footer-muted">· Projeto acadêmico IFRN</span></span>
-        <span className="footer-muted">Ajude um objeto a voltar para casa.</span>
+        <span> Inventum <span className="footer-muted"> </span></span>
+        <span className="footer-muted">Ajude um objeto a voltar para a minha casa (não a do dono).</span>
       </footer>
     </div>
   );

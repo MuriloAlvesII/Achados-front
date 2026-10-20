@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+
+import "./App.css";
+
 import api from "./services/api.js";
+
 import Layout from "./componentes/Layout.jsx";
+
 import HomePage from "./pages/HomePage.jsx";
 import DetailPage from "./pages/DetailPage.jsx";
 import FormPage from "./pages/FormPage.jsx";
