@@ -76,8 +76,6 @@ function DetailPage() {
       {notice && <div className={`notice ${noticeType}`}>{notice}<button className="icon-button" onClick={() => setNotice("")} aria-label="Fechar aviso"></button></div>}
       <section className="detail-card">
         <div className="detail-cover">
-          <div className="detail-cover-icon">
-          </div>
           <div>
             <span className="eyebrow">DETALHES DO REGISTRO</span>
             <h1>{item.nome}</h1>
@@ -90,8 +88,6 @@ function DetailPage() {
           <div className="detail-description"><span className="detail-label">Descrição</span><p>{item.descricao || "Nenhuma descrição informada."}</p></div>
           <div className="detail-info-grid">
             <div className="detail-info">
-              <span className="detail-info-icon">
-              </span>
               <div>
                 <span className="detail-label">Categoria</span>
                 <strong>{item.categoria || "—"}</strong>
@@ -99,8 +95,6 @@ function DetailPage() {
             </div>
 
             <div className="detail-info">
-              <span className="detail-info-icon">
-              </span>
               <div>
                 <span className="detail-label">Local encontrado</span>
                 <strong>{item.local || "—"}</strong>
@@ -108,15 +102,13 @@ function DetailPage() {
             </div>
 
             <div className="detail-info">
-              <span className="detail-info-icon">
-              </span>
               <div>
                 <span className="detail-label">Data em que foi encontrado</span>
                 <strong>{formatDate(item.data_encontrado)}</strong>
               </div>
             </div>
 
-            {item.status === "devolvido" && <div className="detail-info"><span className="detail-info-icon"></span><div><span className="detail-label">Devolvido para</span><strong>{item.devolvido_para || "Não informado"}</strong><small>Data da devolução: {formatDate(item.data_devolucao)}</small></div></div>}
+            {item.status === "devolvido" && <div className="detail-info"><div><span className="detail-label">Devolvido para</span><strong>{item.devolvido_para || "Não informado"}</strong><small>Data da devolução: {formatDate(item.data_devolucao)}</small></div></div>}
           </div>
 
           <div className="detail-actions">

@@ -7,7 +7,6 @@ function ItemCard({ item }) {
   return (
     <Link className="item-card" to={`/item/${id}`}>
       <div className="item-card-top">
-        <span className="item-icon"></span>
         <StatusBadge status={item.status} />
       </div>
 

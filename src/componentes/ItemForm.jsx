@@ -45,7 +45,6 @@ function ItemForm({ initialValues, categories, locations, onSubmit, onCancel, su
   return (
     <form className="form-card" onSubmit={submit}>
       <div className="form-section-title">
-        <span className="section-number">01</span>
         <div>
           <h2>Informações do objeto</h2>
           <p>Preencha os dados para identificar o item encontrado.</p>

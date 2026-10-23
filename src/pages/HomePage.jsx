@@ -93,17 +93,10 @@ function HomePage() {
           <p>Abaixo.</p>
           <Link to="/novo" className="button button-light"> Registre um item encontrado.</Link>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="hero-orbit orbit-one" /><div className="hero-orbit orbit-two" />
-          <div className="hero-package"></div>
-          <span className="float-tag float-tag-one"> Devolução feliz</span>
-          <span className="float-tag float-tag-two"> Busca rápida</span>
-        </div>
       </section>
 
       <section className="stats-grid" aria-label="Resumo dos itens">
         <div className="stat-card">
-          <span className="stat-icon stat-blue"></span>
           <div>
             <span className="stat-label">Total de itens</span>
             <strong>{itens.length}</strong>
@@ -111,7 +104,6 @@ function HomePage() {
         </div>
 
         <div className="stat-card">
-          <span className="stat-icon stat-amber"></span>
           <div>
             <span className="stat-label">Aguardando dono</span>
             <strong>{aguardando}</strong>
@@ -119,7 +111,6 @@ function HomePage() {
         </div>
 
         <div className="stat-card">
-          <span className="stat-icon stat-green"></span>
           <div>
             <span className="stat-label">Devolvidos</span>
             <strong>{devolvidos}</strong>

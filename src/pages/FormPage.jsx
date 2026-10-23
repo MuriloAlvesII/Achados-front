@@ -67,8 +67,6 @@ function FormPage({ mode }) {
     <div className="narrow-page">
       <Link to={editando ? `/item/${id}` : "/"} className="back-link"> {editando ? "Voltar para o detalhe" : "Voltar para os itens"}</Link>
       <div className="form-page-heading">
-        <span className="form-heading-icon">{editando ? "Editar" : "Novo"}</span>
-
         <div>
           <h1>{editando ? "Editar item" : "Cadastrar item"}</h1>
           <p>{editando ? "Atualize as informações do objeto encontrado." : "Registre um objeto encontrado."}</p>

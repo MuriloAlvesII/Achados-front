@@ -6,7 +6,6 @@ function Layout({ dono }) {
       <header className="topbar">
         <div className="topbar-inner">
           <Link to="/" className="brand" aria-label="Achados e Perdidos - início">
-            <span className="brand-mark"></span>
             <span><strong>Inventum<span className="brand-amp"></span></strong><small>IFRN · Campus Pau dos Ferros</small></span>
           </Link>
 
@@ -25,7 +24,7 @@ function Layout({ dono }) {
        
       <footer className="footer">
         <span> Inventum <span className="footer-muted"> </span></span>
-        <span className="footer-muted">Ajude um objeto a voltar para a minha casa (não a do dono).</span>
+        <span className="footer-muted">Sistema de achados e perdidos do IFRN.</span>
       </footer>
     </div>
   );
