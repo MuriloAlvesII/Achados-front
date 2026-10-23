@@ -44,14 +44,23 @@ function ItemForm({ initialValues, categories, locations, onSubmit, onCancel, su
 
   return (
     <form className="form-card" onSubmit={submit}>
-      <div className="form-section-title"><span className="section-number">01</span><div><h2>Informações do objeto</h2><p>Preencha os dados para identificar o item encontrado.</p></div></div>
+      <div className="form-section-title">
+        <span className="section-number">01</span>
+        <div>
+          <h2>Informações do objeto</h2>
+          <p>Preencha os dados para identificar o item encontrado.</p>
+        </div>
+      </div>
+
       <div className="form-grid">
         <label className="field field-full">Nome do item <span className="required">*</span>
           <input name="nome" value={form.nome} onChange={update} placeholder="Ex.: Garrafa térmica azul" required maxLength={120} />
         </label>
+
         <label className="field field-full">Descrição <span className="required">*</span>
           <textarea name="descricao" value={form.descricao} onChange={update} placeholder="Descreva características que ajudem a reconhecer o objeto..." rows={4} required maxLength={2000} />
         </label>
+
         <label className="field">Categoria <span className="required">*</span>
           <select name="categoria" value={form.categoria} onChange={update} required>
             <option value="">Selecione uma categoria</option>
@@ -60,6 +69,7 @@ function ItemForm({ initialValues, categories, locations, onSubmit, onCancel, su
           </select>
           {form.categoria === "__custom" && <input className="field-extra" value={customCategory} onChange={(e) => setCustomCategory(e.target.value)} placeholder="Digite a categoria" required />}
         </label>
+
         <label className="field">Local encontrado <span className="required">*</span>
           <select name="local" value={form.local} onChange={update} required>
             <option value="">Selecione um local</option>
@@ -68,14 +78,17 @@ function ItemForm({ initialValues, categories, locations, onSubmit, onCancel, su
           </select>
           {form.local === "__custom" && <input className="field-extra" value={customLocation} onChange={(e) => setCustomLocation(e.target.value)} placeholder="Digite o local" required />}
         </label>
+
         <label className="field">Data em que foi encontrado <span className="required">*</span>
           <input type="date" name="data_encontrado" value={form.data_encontrado} onChange={update} required />
         </label>
       </div>
+      
       <div className="form-actions">
         <button type="button" className="button button-secondary" onClick={onCancel} disabled={submitting}> Cancelar</button>
         <button type="submit" className="button button-primary" disabled={submitting}> {submitting ? "Salvando..." : "Salvar item"}</button>
       </div>
+
     </form>
   );
 }

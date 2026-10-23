@@ -10,15 +10,18 @@ function ItemCard({ item }) {
         <span className="item-icon"></span>
         <StatusBadge status={item.status} />
       </div>
+
       <div className="item-card-body">
         <h3>{item.nome || "Item sem nome"}</h3>
         <p className="item-description">{item.descricao || "Sem descrição informada."}</p>
       </div>
+
       <div className="item-meta">
         <span>{item.categoria || "Sem categoria"}</span>
         <span>{item.local || "Local não informado"}</span>
         <span>{formatDate(item.data_encontrado)}</span>
       </div>
+      
       <div className="item-card-link">Ver detalhes </div>
     </Link>
   );
