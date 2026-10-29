@@ -29,7 +29,6 @@ function Layout({ children }) {
       <header className="topbar">
         <div className="topbar-inner">
           <Link to="/" className="brand">
-            <span aria-hidden="true">📦</span>
             <span>
               <strong>Inventum</strong>
               <small>Achados e perdidos • IFRN</small>
@@ -59,7 +58,6 @@ function Layout({ children }) {
       <div className="page-content">{children}</div>
       <footer className="footer">
         <span>Inventum • IFRN Pau dos Ferros</span>
-        <span className="footer-muted">Projeto de Programação para Internet</span>
       </footer>
     </div>
   );

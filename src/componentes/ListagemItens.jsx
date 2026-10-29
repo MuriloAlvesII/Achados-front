@@ -23,7 +23,6 @@ function ListagemItens() {
         setCategorias(extrairLista(respostaCategorias.data, "categorias"));
         setLocais(extrairLista(respostaLocais.data, "locais"));
       } catch (error) {
-        // A listagem continua funcionando mesmo se os filtros não carregarem.
         console.error("Não foi possível carregar as opções dos filtros.", error);
       }
     }
@@ -50,7 +49,6 @@ function ListagemItens() {
   function pesquisar(evento) {
     evento.preventDefault();
 
-    // Só enviamos os filtros que estão preenchidos.
     const filtros = {};
     if (busca.trim()) filtros.busca = busca.trim();
     if (status) filtros.status = status;
@@ -72,9 +70,7 @@ function ListagemItens() {
     <section className="listing-section">
       <div className="section-heading">
         <div>
-          <span className="eyebrow eyebrow-dark">OBJETOS DO CAMPUS</span>
           <h2>Itens encontrados</h2>
-          <p>Pesquise para descobrir se alguém encontrou o que você perdeu.</p>
         </div>
       </div>
 

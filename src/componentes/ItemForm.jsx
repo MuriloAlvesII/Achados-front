@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { valorOpcao } from "../services/format";
 
-// Este formulário é usado tanto no cadastro quanto na edição.
 function ItemForm({ dados, setDados, categorias, locais, salvar, salvando, editando }) {
   function alterar(evento) {
     const { name, value } = evento.target;

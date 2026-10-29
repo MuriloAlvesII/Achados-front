@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { formatarData } from "../services/format";
 
-// Um card recebe um item e mostra suas informações.
 function ItemCard({ item }) {
   const devolvido = item.status === "devolvido";
 

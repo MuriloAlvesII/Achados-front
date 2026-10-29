@@ -51,7 +51,6 @@ function Detailhe() {
         devolvido_para: devolvidoPara.trim(),
       });
 
-      // Buscamos novamente para mostrar o status e a data atualizados.
       const resposta = await api.get(`/itens/${id}`);
       setItem(resposta.data);
       setSucesso("Devolução registrada com sucesso!");
@@ -64,7 +63,6 @@ function Detailhe() {
   }
 
   async function excluirItem() {
-    // O professor pediu uma confirmação antes de excluir.
     const confirmou = window.confirm(`Tem certeza que deseja excluir "${item.nome}"?`);
     if (!confirmou) return;
 
