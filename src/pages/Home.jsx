@@ -1,26 +1,20 @@
-import ItemCard from "../components/ItemCard";
+import { Link } from "react-router-dom";
+import ListagemItens from "../componentes/ListagemItens";
 
-import { useEffect, useState } from "react";
-import api from "../services/api";
-
-function Inicio() {
-  const [itens, setItens] = useState([]);
-
-  useEffect(() => {
-    async function carregarItens() {
-      try {
-        const resposta = await api.get("/itens");
-
-        console.log(resposta.data);
-      } catch (erro) {
-        console.error("Erro ao buscar itens:", erro);
-      }
-    }
-
-    carregarItens();
-  }, []);
-
-  return <h1>Achados e Perdidos</h1>;
+function Home() {
+  return (
+    <main>
+      <section className="hero">
+        <div className="hero-copy">
+          <span className="eyebrow">SISTEMA DE ACHADOS E PERDIDOS</span>
+          <h1>Perdeu alguma coisa? <span>Vamos encontrar.</span></h1>
+          <p>Veja os objetos encontrados no campus e registre novos itens para ajudar outras pessoas.</p>
+          <Link to="/novo" className="button button-light">+ Cadastrar item</Link>
+        </div>
+      </section>
+      <ListagemItens />
+    </main>
+  );
 }
 
-export default Inicio;
+export default Home;
